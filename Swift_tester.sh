@@ -5,9 +5,9 @@
 #For HP's US-West
 
 
-export test_file=/home/ubuntu/testfile
+export test_file=/home/ubuntu/SOME_FILE
 export test_file_name=$(basename $test_file)
-export container="Server_Backups"
+export container="CHANGE ME"
 export HP_PROJECT_ID="CHANGE ME"
 export HP_ACCESS_KEY="CHANGE ME"
 export HP_SECRET_KEY="CHANGE ME"
