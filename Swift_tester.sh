@@ -2,7 +2,10 @@
 # Collin's Dirty Sed Auth and an example swift call
 # Slightly modified by @tsykoduk
 
-# You'll need to set up a container in USWest and USEast
+#
+# Tests the Swift API from your location
+# It will run swift API commands via Curl to US-West and US-East
+# You'll need to set up a target container in US-West and US-East
 # 
 # Change the config below to suit your enviroment
 
