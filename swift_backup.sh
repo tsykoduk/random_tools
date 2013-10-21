@@ -14,11 +14,16 @@ target="backups_${now}.tgz"
 echo "starting backup"
 echo "moving backup assets over"
 
-#clean up after last run
+#clean up after last run, just incase something went south.
 rm -rf ~/backups/scratch/*
 
-#Anything you put into the scratch directory will be backed up, so you can use things like
-#MySQL dump or what have you, and just put the resultant files in ~/backups/scratch
+
+
+# Anything you put into the scratch directory will be backed up, so you can use things like
+# MySQL dump or what have you, and just put the resultant files in ~/backups/scratch
+
+
+#### PUT THE COMMANDS TO COPY THE STUFF YOU WANT TO BACKUP BELOW
 
 cp -R ~/.znc ~/backups/scratch/
 cp -R ~/git ~/backups/scratch/
@@ -26,7 +31,7 @@ cp -R ~/www ~/backups/scratch/
 cp ~/push_site.sh ~/backups/scratch/
 cp ~/site_updater ~/backups/scratch/
 
-
+#### PUT THE COMMANDS TO COPY THE STUFF YOU WANT TO BACKUP ABOVE
 
 #Create the archive
 cd ~/backups/
@@ -43,3 +48,6 @@ swift upload $Swift_Container $target
 #Clean up
 echo "Moving archive to storage"
 mv $target ~/backups/backup_storage
+
+#clean up the scratch directory
+rm -rf ~/backups/scratch/*
