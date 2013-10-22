@@ -29,6 +29,7 @@ echo "checking for my directories"
 
 if [ ! -d $Backups_Home_Directory ]; then
   echo "woops, something is wrong. My expected home directory is missing. Perhaps a typo in the config?"
+  echo "exiting!"
   exit 1
 fi
 
@@ -55,8 +56,6 @@ rm -rf ~/backups/scratch/*
 
 # Anything you put into the scratch directory will be backed up, so you can use things like
 # MySQL dump or what have you, and just put the resultant files in ~/backups/scratch
-
-
 #### PUT THE COMMANDS TO COPY THE STUFF YOU WANT TO BACKUP BELOW
 
 cp -R ~/.znc ~/backups/scratch/
