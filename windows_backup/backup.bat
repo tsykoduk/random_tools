@@ -1,5 +1,4 @@
-REM @echo off
-
+@echo off
 REM Let's get the date in a format we can use for a filename
 FOR /F "tokens=*" %%F IN ('Datefmt.bat yy mm dd /LZ') do SET Datefmt=%%F
 

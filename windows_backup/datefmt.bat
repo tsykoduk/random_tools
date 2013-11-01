@@ -1,4 +1,5 @@
 @ECHO OFF
+
 IF NOT "%OS%"=="Windows_NT" GOTO Syntax
 IF      "%~1"==""           GOTO Syntax
 IF NOT  "%~6"==""           GOTO Syntax
