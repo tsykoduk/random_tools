@@ -27,4 +27,4 @@ mkdir e:\backups\target
 
 REM move it to The Cloud!
 
-REM %SystemRoot%\syswow64\WindowsPowerShell\v1.0\powershell.exe e:\backups\tools\backup_powershell.ps1
+%SystemRoot%\syswow64\WindowsPowerShell\v1.0\powershell.exe e:\backups\tools\backup_powershell.ps1

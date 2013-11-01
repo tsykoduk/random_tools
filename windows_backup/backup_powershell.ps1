@@ -1,3 +1,3 @@
 cd HPCS:
-cd Server_Backups
+cd Server_Backups:
 copy e:\backups\archives\
