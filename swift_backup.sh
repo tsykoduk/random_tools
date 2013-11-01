@@ -63,6 +63,7 @@ if [ ! -d "${Backups_Home_Directory}/backup_storage" ]; then
   mkdir $Backups_Home_Directory/backup_storage
 fi
 
+
 #start process, create a unique filename
 target="${Server_Unique_Name}_${now}.tgz"
 
