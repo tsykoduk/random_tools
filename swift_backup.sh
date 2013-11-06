@@ -27,6 +27,12 @@ Logs_Directory="/home/ubuntu/backups/logs"
 
 # first off, we need to check for the logs directory
 
+if [ ! -d $Backups_Home_Directory ]; then
+  echo "woops, something is wrong. My expected home directory is missing. Perhaps a typo in the config?"
+  echo "exiting!"
+  exit 1
+fi
+
 if [ ! -d "${Logs_Directory}" ]; then
   echo "woops, my logs directory is missing. I'll create a new one"
   mkdir $Logs_Directory
@@ -46,12 +52,6 @@ echo "Logging Directory = ${Logs_Directory}">>$logs
 # Env Checks
 
 echo "checking for my directories">>$logs
-
-if [ ! -d $Backups_Home_Directory ]; then
-  echo "woops, something is wrong. My expected home directory is missing. Perhaps a typo in the config?">>$logs
-  echo "exiting!">>$logs
-  exit 1
-fi
 
 if [ ! -d "${Backups_Home_Directory}/scratch" ]; then
   echo "woops, my scratch directory is missing. I'll create a new one">>$logs
