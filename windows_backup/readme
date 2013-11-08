@@ -3,3 +3,14 @@ Just a baseline for a windows backup tool using HPCloud's object store.
 You will need to insure that the HPCloud CLI for Windows is installed and configured.
 
 This backup is meant to back up single files, not system state. However anything that you can get into a file should work - ie MSSQl dumps etc.
+
+Setup steps:
+
+Install .net 4.5
+Install the HPCloud Powershell CLI
+Install 7zip
+
+Launch the correct Powershell (x86 or 64bit)
+
+
+Configure it with the credentials you will be using to access the HPCloud Objectstore
