@@ -46,7 +46,7 @@ cp -R * $PRODUCTION
 
 cd $PRODUCTION
 
-#Might need sudo here, or not. 
+#Might need sudo here, or not. In fact, depending on your set up, might not even need this at all!
 
 chown -R $WWW-USER:$WWW-GROUP *
 
